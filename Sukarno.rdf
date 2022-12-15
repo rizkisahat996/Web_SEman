@@ -17,7 +17,10 @@
 	<rdfs:synopsis xml:lang="en">Sukarno born at Koesno Sosrodihardjo, Javanese, 6 June 1901 - 21 June 1970. Sukarno was an Indonesian statesman, orator, revolutionary, and nationalist who was the first president of Indonesia, serving from 1945 to 1967.</rdfs:synopsis>
 	<dbo:almaMater rdf:resource="https://dbpedia.org/page/Honda"/>
 	<dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1901-06-06</dbo:birthDate>
+	<dbo:birthPlace rdf:resource="http://dbpedia.org/resource/Surabaya" />
+	<dbp:birthPlace rdf:resource="http://dbpedia.org/resource/Dutch_East_Indies" />
 	<dbo:deathDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1970-06-21</dbo:deathDate>
+	<dbp:title rdf:resource="http://dbpedia.org/resource/President_of_Indonesia" />
 	<dbo:child1 rdf:resource="dbr:Megawati_Sukarnoputri" />
 	<dbo:child2 rdf:resource="dbr:Sukmawati_Sukarnoputri" />
 	<dbo:child3 rdf:resource="dbr:Guruh_Sukarnoputra" />
