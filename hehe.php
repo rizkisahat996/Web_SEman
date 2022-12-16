@@ -2,8 +2,6 @@
 require 'vendor/autoload.php';
 require_once __DIR__."/html_tag_helpers.php";
 
-
-
     // \EasyRdf\RdfNamespace::setDefault('og');
 
     \EasyRdf\RdfNamespace::set('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#');
@@ -11,7 +9,6 @@ require_once __DIR__."/html_tag_helpers.php";
     \EasyRdf\RdfNamespace::set('dbo', 'http://dbpedia.org/ontology/');
     \EasyRdf\RdfNamespace::set('dbp', 'http://dbpedia.org/property/');
     \EasyRdf\RdfNamespace::setDefault('og');
-
 
 $sparql_jena = new \EasyRdf\Sparql\Client('http://localhost:3030/sukarno/sparql');
 
@@ -32,11 +29,6 @@ $sparql_query = 'select ?synopsis ?child1  where{
     echo '</b>';
     echo '<br/>';
     }
-
-    // pastikan $uri_rdf sesuai dengan setting di komputer Anda
-    $uri_rdf = 'http://localhost/Web_SEman/w.rdf';
-    $data = \EasyRdf\Graph::newAndLoad($uri_rdf);
-    $pe = $data->primaryTopic();
 
 ?>
 <!DOCTYPE html>
@@ -77,13 +69,11 @@ $sparql_query = 'select ?synopsis ?child1  where{
         <dt>Description:</dt> <dd><?= $doc->description ?></dd>
       </dl>
     </div>
-    <div>
-      <?=
-        $pe->get('foaf:name'),
-        $pe->get('foaf:almaMater')
-      ?>
-    </div>
+
   </div>
+  
+  
 </div>
+
 </body>
 </html>
