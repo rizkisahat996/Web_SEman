@@ -13,6 +13,27 @@
 <rdf:Description rdf:about="https://dbpedia.org/page/Sukarno">
 	<foaf:name xml:lang="en">Sukarno Hatta</foaf:name>
 	<rdfs:label xml:lang="en">Sukarno</rdfs:label>
+
+	<foaf:PersonalProfileDocument rdf:about="http://localhost/Web_SEman/Sukarno.rdf">
+    	<rdfs:label>Sukarno Bibliography</rdfs:label>
+    	<foaf:maker rdf:resource="http://localhost/Web_SEman/"/>
+    	<foaf:primaryTopic rdf:resource="http://localhost/Web_SEman/"/>
+  	</foaf:PersonalProfileDocument>
+
+	<foaf:Person rdf:about="http://localhost/Web_SEman/Sukarno.rdf">
+		<foaf:name xml:lang="en">Sukarno Hatta</foaf:name>
+		<foaf:homepage rdf:resource="https://dbpedia.org/page/Sukarno"/>
+		<rdfs:label xml:lang="en">Sukarno</rdfs:label>
+		<hiperinflasi:year1957 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">14</hiperinflasi:year1957>
+		<hiperinflasi:year1958 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">18</hiperinflasi:year1958>
+		<hiperinflasi:year1959 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">13</hiperinflasi:year1959>
+		<hiperinflasi:year1960 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">20</hiperinflasi:year1960>
+		<hiperinflasi:year1961 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">156</hiperinflasi:year1961>
+		<hiperinflasi:year1962 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">129</hiperinflasi:year1962>
+		<hiperinflasi:year1963 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">129</hiperinflasi:year1963>
+		<hiperinflasi:year1964 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">129</hiperinflasi:year1964>
+		<hiperinflasi:year1965 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">129</hiperinflasi:year1965>
+		<hiperinflasi:year1966 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">129</hiperinflasi:year1966>
 	
 	<rdfs:synopsis xml:lang="en">Sukarno born at Koesno Sosrodihardjo, Javanese, 6 June 1901 - 21 June 1970. Sukarno was an Indonesian statesman, orator, revolutionary, and nationalist who was the first president of Indonesia, serving from 1945 to 1967.</rdfs:synopsis>
 	<dbo:almaMater rdf:resource="https://dbpedia.org/page/Honda"/>
@@ -25,6 +46,14 @@
 	<dbo:child2 rdf:resource="dbr:Sukmawati_Sukarnoputri" />
 	<dbo:child3 rdf:resource="dbr:Guruh_Sukarnoputra" />
 	<dbo:child4 rdf:resource="dbr:Rachmawati_Sukarnoputri" />
+
+	<owl:sameAs>
+		<foaf:Person rdf:about="https://dbpedia.org/page/Sukarno">
+			<rdfs:label>Sukarno</rdfs:label>
+			<foaf:homepage rdf:resource="https://dbpedia.org/page/Sukarno"/>
+		</foaf:Person>
+		</owl:sameAs>
+	</foaf:Person>
 
 </rdf:Description>
 

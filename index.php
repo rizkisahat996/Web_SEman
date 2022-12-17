@@ -2,13 +2,17 @@
 require 'vendor/autoload.php';
 require_once __DIR__."/html_tag_helpers.php";
 
-
-
-
-    \EasyRdf\RdfNamespace::set('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#');
-    \EasyRdf\RdfNamespace::set('rdfs','http://www.w3.org/2000/01/rdf-schema#');
-    \EasyRdf\RdfNamespace::set('dbo', 'http://dbpedia.org/ontology/');
+    // inisialisasi namespace untuk query rdf
+    \EasyRdf\RdfNamespace::set('owl', 'http://www.w3.org/2002/07/owl#');
+    \EasyRdf\RdfNamespace::set('foaf', 'http://xmlns.com/foaf/0.1/');
     \EasyRdf\RdfNamespace::set('dbp', 'http://dbpedia.org/property/');
+    \EasyRdf\RdfNamespace::set('dbo', 'http://dbpedia.org/ontology/');
+    \EasyRdf\RdfNamespace::set('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#');
+    \EasyRdf\RdfNamespace::set('rdfs', 'http://www.w3.org/2000/01/rdf-schema#');
+    \EasyRdf\RdfNamespace::set('hiperinflasi', 'http://example.org/schema/hiperinflasi');
+    \EasyRdf\RdfNamespace::set('prov', 'http://www.w3.org/ns/prov#');
+    \EasyRdf\RdfNamespace::set('gold', 'http://purl.org/linguistics/gold/');
+    \EasyRdf\RdfNamespace::set('dct', 'http://purl.org/dc/terms/');
     \EasyRdf\RdfNamespace::setDefault('og');
 
 
@@ -17,6 +21,20 @@ $sparql_jena = new \EasyRdf\Sparql\Client('http://localhost:3030/sukarno/sparql'
 $sparql_query = 'select ?synopsis ?child1  where{
   ?m dbo:child1 ?child1;
      rdfs:synopsis ?synopsis}';
+   
+$sparql_query = '
+     SELECT DISTINCT *
+     WHERE {?m foaf:name ?name;
+               hiperinflasi:year1957 ?year1957;
+               hiperinflasi:year1958 ?year1958;
+               hiperinflasi:year1959 ?year1959;
+               hiperinflasi:year1960 ?year1960;
+               hiperinflasi:year1961 ?year1961;
+               hiperinflasi:year1962 ?year1962;
+               hiperinflasi:year1963 ?year1963;
+               hiperinflasi:year1964 ?year1964;
+               hiperinflasi:year1965 ?year1965;
+               hiperinflasi:year1966 ?year1966. }';
 
   $result = $sparql_jena->query($sparql_query);
 
@@ -190,42 +208,54 @@ $sparql_query = 'select ?synopsis ?child1  where{
       </div>
       <!-- providing section end -->
       <!-- choose section start -->
+
+      <!-- Chart -->
       <div class="choose_section layout_padding">
          <div class="container">
-            <h1 class="services_taital">Why <span style="color: #0c426e">Choose Us?</span></h1>
+            <h1 class="services_taital"><span style="color: #0c426e">Hiperinflasi Masa Kepemimpinan Soekarno(1945-1965)</span></h1>
             <div class="choose_section_2 layout_padding">
-               <div class="row">
-                  <div class="col-md-4">
-                     <div class="choose_box">
-                        <div class="number_1">
-                           <h4 class="number_text">01</h4>
-                           <h4 class="trusted_text">Trusted Services</h4>
-                        </div>
-                        <p class="dummy_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The  </p>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        <?php
+        foreach ($result as $row) {
+        ?>
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Kenaikan Harga(%)'],
+          ["1957", <?= $row->year1957; ?>],
+          ["1958", <?= $row->year1958; ?>],
+          ["1959", <?= $row->year1959; ?>],
+          ["1960", <?= $row->year1960; ?>],
+          ["1961", <?= $row->year1961; ?>],
+          ["1962", <?= $row->year1962; ?>],
+          ["1963", <?= $row->year1963; ?>],
+          ["1964", <?= $row->year1964; ?>],
+          ["1965", <?= $row->year1965; ?>],
+          ["1966", <?= $row->year1966; ?>],
+        ]);
+        <?php } ?>
+
+        var options = {
+          chart: {
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+</head>
+    <div id="columnchart_material" style="width: 900px; height: 400px;"></div>
                      </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="choose_box">
-                        <div class="number_1">
-                           <h4 class="number_text">02</h4>
-                           <h4 class="trusted_text">Talented Workers</h4>
-                        </div>
-                        <p class="dummy_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The  </p>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="choose_box">
-                        <div class="number_1">
-                           <h4 class="number_text">03</h4>
-                           <h4 class="trusted_text">Organic Products</h4>
-                        </div>
-                        <p class="dummy_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The  </p>
                      </div>
                   </div>
                </div>
             </div>
-         </div>
-      </div>
+
       <!-- choose section end -->
       <!-- testimonial section start -->
       <div class="testimonial_section layout_padding">
