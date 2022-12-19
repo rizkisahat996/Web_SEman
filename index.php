@@ -39,7 +39,12 @@ $synopsis = 'select ?synopsis ?battles ?birthDate ?birthPlace ?office where{
 $sparql_query2 = 'select ?birthPlace  where{
    ?m dbo:birthPlace ?birthPlace}';
    
-$sparql_query = '
+
+$sparql_query = 'select ?synopsis ?child1  where{
+  ?m dbo:child1 ?child1;
+     rdfs:synopsis ?synopsis}';
+
+     $sparql_query = '
      SELECT DISTINCT *
      WHERE {?m foaf:name ?name;
                hiperinflasi:year1957 ?year1957;
@@ -71,6 +76,22 @@ $sparql_query = '
    // }
 
   
+      // set sparql endpoint
+      $sparql_endpoint = 'https://dbpedia.org/sparql';
+      $sparql = new \EasyRdf\Sparql\Client($sparql_endpoint);
+  
+
+//   foreach($result as $row){
+//     echo '<br>';
+//     echo '<b>';
+//    //  echo $row -> child1;
+//     echo '</b>';
+//     echo '<br/>';
+//     echo '<b>';
+//    //  echo $row -> synopsis;
+//     echo '</b>';
+//     echo '<br/>';
+//     }
 
     $uri_rdf = 'http://localhost/Web_SEman/w.rdf';
     $data = \EasyRdf\Graph::newAndLoad($uri_rdf);
@@ -297,13 +318,36 @@ $doc = $data->primaryTopic();//dipakai untuk jika ada titlle didbpedia untuk pre
           ["1966", <?= $row->year1966; ?>],
         ]);
         <?php } ?>
+               // <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+               // <script type="text/javascript">
+               //    google.charts.load('current', {'packages':['bar']});
+               //    google.charts.setOnLoadCallback(drawChart);
 
-        var options = {
-          chart: {
-          }
-        };
+               //          function drawChart() {
+               //          <?php
+               //          foreach ($result as $row) {
+               //          ?>
+               //          var data = google.visualization.arrayToDataTable([
+               //             ['Year', 'Kenaikan Harga(%)'],
+               //             ["1957", <?= $row->year1957; ?>],
+               //             ["1958", <?= $row->year1958; ?>],
+               //             ["1959", <?= $row->year1959; ?>],
+               //             ["1960", <?= $row->year1960; ?>],
+               //             ["1961", <?= $row->year1961; ?>],
+               //             ["1962", <?= $row->year1962; ?>],
+               //             ["1963", <?= $row->year1963; ?>],
+               //             ["1964", <?= $row->year1964; ?>],
+               //             ["1965", <?= $row->year1965; ?>],
+               //             ["1966", <?= $row->year1966; ?>],
+               //          ]);
+                       
 
-        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+                        var options = {
+                           chart: {
+                           }
+                        };
+
+                        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }
@@ -314,10 +358,19 @@ $doc = $data->primaryTopic();//dipakai untuk jika ada titlle didbpedia untuk pre
     <div id="columnchart_material" style="width: 900px; height: 400px;"></div>
                      </div>
                      </div>
+                        chart.draw(data, google.charts.Bar.convertOptions(options));
+                        }
+               </script>
+                  <div class="container">
+                     <div class="row">
+                       <div id="columnchart_material" style="width: 800px; height: 400px;"></div>
+                    </div>
                   </div>
-               </div>
+               </div>  
             </div>
-
+         </div>
+       </div>
+   
       <!-- choose section end -->
 
       <!-- team section start -->

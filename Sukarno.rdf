@@ -12,11 +12,20 @@
 	xmlns:prov="http://www.w3.org/ns/prov#" 
 	xmlns:hiperinflasi="http://example.org/schema/hiperinflasi">
 
-	<foaf:PersonalProfileDocument rdf:about="http://localhost/Web_SEman/Sukarno.rdf">
+
+	
+		<foaf:PersonalProfileDocument rdf:about="http://localhost/Web_SEman/Sukarno.rdf">
     	<rdfs:label>Sukarno Bibliography</rdfs:label>
-    	<foaf:maker rdf:resource="http://localhost/arnis/Web_SEman/"/>
-    	<foaf:primaryTopic rdf:resource="http://localhost/arnis/Web_SEman/"/>
-  	</foaf:PersonalProfileDocument>
+    	<foaf:maker rdf:resource="http://localhost/Web_SEman/"/>
+    	<foaf:primaryTopic rdf:resource="http://localhost/Web_SEman/"/>
+  		</foaf:PersonalProfileDocument>
+
+<rdf:Description rdf:about="https://dbpedia.org/page/Sukarno">
+	<foaf:name xml:lang="en">Sukarno Hatta</foaf:name>
+	<rdfs:label xml:lang="en">Sukarno</rdfs:label>
+	
+
+</rdf:Description>
 
 	<foaf:Person rdf:about="http://localhost/arnis/Web_SEman/Sukarno.rdf">
 		<foaf:name xml:lang="en">Sukarno Hatta</foaf:name>
@@ -47,6 +56,7 @@
 		<dbp:battles xml:lang="en">Indonesian National Revolution</dbp:battles>
 		<dbp:office xml:lang="en">President of the United States of Indonesia</dbp:office>
 		
+	
 		<owl:sameAs>
 		<foaf:Person rdf:about="https://dbpedia.org/page/Sukarno">
 			<rdfs:label>Sukarno</rdfs:label>
