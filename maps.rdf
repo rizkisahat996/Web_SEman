@@ -5,11 +5,11 @@
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:dc="http://purl.org/dc/terms/">
-<foaf:PersonalProfileDocument rdf:about="http://localhost/all_tubes/Web_SEman/maps.rdf">
-<foaf:maker rdf:resource="http://localhost/all_tubes/Web_SEman/"/>
-<foaf:primaryTopic rdf:resource="http://localhost/all_tubes/Web_SEman/"/>
+<foaf:PersonalProfileDocument rdf:about="http://localhost/Web_SEman/maps.rdf">
+<foaf:maker rdf:resource="http://localhost/Web_SEman/"/>
+<foaf:primaryTopic rdf:resource="http://localhost/Web_SEman/"/>
 </foaf:PersonalProfileDocument>
-  <foaf:Maps rdf:about="http://localhost/all_tubes/Web_SEman/">
+  <foaf:Maps rdf:about="http://localhost/Web_SEman/">
     <!-- <foaf:title>Museum Louvre</foaf:title> 
     <foaf:country>France</foaf:country> 
     <foaf:latitude>48.860294</foaf:latitude> 

@@ -6,6 +6,8 @@ require 'vendor/autoload.php';
 \EasyRdf\RdfNamespace::set('dbo', 'http://dbpedia.org/ontology/');
 \EasyRdf\RdfNamespace::set('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#');
 \EasyRdf\RdfNamespace::set('rdfs', 'http://www.w3.org/2000/01/rdf-schema#');
+\EasyRdf\RdfNamespace::setDefault('og');
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +25,7 @@ require 'vendor/autoload.php';
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 
-  <style>
+  <!-- <style>
     html,
     body {
       height: 100%;
@@ -36,13 +38,13 @@ require 'vendor/autoload.php';
       max-width: 100%;
       max-height: 100%;
     }
-  </style>
+  </style> -->
 </head>
 
 <body>
   <?php
 
-  $uri_rdf = 'http://localhost/all_tubes/Web_SEman/maps.rdf';
+  $uri_rdf = 'http://localhost/Web_SEman/maps.rdf';
   $data = \EasyRdf\Graph::newAndLoad($uri_rdf);//yg menghubungka ke rdf yg telah dibuat
   $doc = $data->primaryTopic();//dipakai untuk jika ada titlle didbpedia untuk predikat sepertinya
 

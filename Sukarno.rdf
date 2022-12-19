@@ -9,18 +9,16 @@
 	xmlns:dbo="http://dbpedia.org/ontology/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:gold="http://purl.org/linguistics/gold/"
-	xmlns:prov="http://www.w3.org/ns/prov#" >
-<rdf:Description rdf:about="https://dbpedia.org/page/Sukarno">
-	<foaf:name xml:lang="en">Sukarno Hatta</foaf:name>
-	<rdfs:label xml:lang="en">Sukarno</rdfs:label>
+	xmlns:prov="http://www.w3.org/ns/prov#" 
+	xmlns:hiperinflasi="http://example.org/schema/hiperinflasi">
 
 	<foaf:PersonalProfileDocument rdf:about="http://localhost/Web_SEman/Sukarno.rdf">
     	<rdfs:label>Sukarno Bibliography</rdfs:label>
-    	<foaf:maker rdf:resource="http://localhost/Web_SEman/"/>
-    	<foaf:primaryTopic rdf:resource="http://localhost/Web_SEman/"/>
+    	<foaf:maker rdf:resource="http://localhost/arnis/Web_SEman/"/>
+    	<foaf:primaryTopic rdf:resource="http://localhost/arnis/Web_SEman/"/>
   	</foaf:PersonalProfileDocument>
 
-	<foaf:Person rdf:about="http://localhost/Web_SEman/Sukarno.rdf">
+	<foaf:Person rdf:about="http://localhost/arnis/Web_SEman/Sukarno.rdf">
 		<foaf:name xml:lang="en">Sukarno Hatta</foaf:name>
 		<foaf:homepage rdf:resource="https://dbpedia.org/page/Sukarno"/>
 		<rdfs:label xml:lang="en">Sukarno</rdfs:label>
@@ -34,27 +32,26 @@
 		<hiperinflasi:year1964 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">129</hiperinflasi:year1964>
 		<hiperinflasi:year1965 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">129</hiperinflasi:year1965>
 		<hiperinflasi:year1966 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">129</hiperinflasi:year1966>
-	
-	<rdfs:synopsis xml:lang="en">Sukarno born at Koesno Sosrodihardjo, Javanese, 6 June 1901 - 21 June 1970. Sukarno was an Indonesian statesman, orator, revolutionary, and nationalist who was the first president of Indonesia, serving from 1945 to 1967.</rdfs:synopsis>
-	<dbo:almaMater rdf:resource="https://dbpedia.org/page/Honda"/>
-	<dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1901-06-06</dbo:birthDate>
-	<dbo:birthPlace rdf:resource="http://dbpedia.org/resource/Surabaya" />
-	<dbp:birthPlace rdf:resource="http://dbpedia.org/resource/Dutch_East_Indies" />
-	<dbo:deathDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1970-06-21</dbo:deathDate>
-	<dbp:title rdf:resource="http://dbpedia.org/resource/President_of_Indonesia" />
-	<dbo:child1 rdf:resource="dbr:Megawati_Sukarnoputri" />
-	<dbo:child2 rdf:resource="dbr:Sukmawati_Sukarnoputri" />
-	<dbo:child3 rdf:resource="dbr:Guruh_Sukarnoputra" />
-	<dbo:child4 rdf:resource="dbr:Rachmawati_Sukarnoputri" />
 
-	<owl:sameAs>
+		<rdfs:synopsis xml:lang="en">Sukarno born at Koesno Sosrodihardjo, Javanese, 6 June 1901 - 21 June 1970. Sukarno was an Indonesian statesman, orator, revolutionary, and nationalist who was the first president of Indonesia, serving from 1945 to 1967.</rdfs:synopsis>
+		<dbo:almaMater rdf:resource="https://dbpedia.org/page/Honda"/>
+		<dbo:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1901-06-06</dbo:birthDate>
+		<dbo:birthPlace rdf:resource="http://dbpedia.org/resource/Surabaya" />
+		<dbp:birthPlace rdf:resource="http://dbpedia.org/resource/Dutch_East_Indies" />
+		<dbo:deathDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1970-06-21</dbo:deathDate>
+		<dbp:title rdf:resource="http://dbpedia.org/resource/President_of_Indonesia" />
+		<dbo:child1 rdf:resource="dbr:Megawati_Sukarnoputri" />
+		<dbo:child2 rdf:resource="dbr:Sukmawati_Sukarnoputri" />
+		<dbo:child3 rdf:resource="dbr:Guruh_Sukarnoputra" />
+		<dbo:child4 rdf:resource="dbr:Rachmawati_Sukarnoputri" />
+		<dbp:battles xml:lang="en">Indonesian National Revolution</dbp:battles>
+		<dbp:office xml:lang="en">President of the United States of Indonesia</dbp:office>
+		
+		<owl:sameAs>
 		<foaf:Person rdf:about="https://dbpedia.org/page/Sukarno">
 			<rdfs:label>Sukarno</rdfs:label>
 			<foaf:homepage rdf:resource="https://dbpedia.org/page/Sukarno"/>
 		</foaf:Person>
 		</owl:sameAs>
 	</foaf:Person>
-
-</rdf:Description>
-
 </rdf:RDF>
