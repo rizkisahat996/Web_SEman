@@ -10,17 +10,7 @@
 <foaf:primaryTopic rdf:resource="http://localhost/Web_SEman/"/>
 </foaf:PersonalProfileDocument>
   <foaf:Maps rdf:about="http://localhost/Web_SEman/">
-    <!-- <foaf:title>Museum Louvre</foaf:title> 
-    <foaf:country>France</foaf:country> 
-    <foaf:latitude>48.860294</foaf:latitude> 
-    <foaf:longitude>2.338629</foaf:longitude> 
-    <foaf:dms_lat>48° 51' 37.058'' N</foaf:dms_lat> 
-    <foaf:dms_long>	2° 20' 19.0644'' E</foaf:dms_long> 
-    <foaf:utm_easting>451,490.65</foaf:utm_easting> 
-    <foaf:utm_northing>5,412,136.37</foaf:utm_northing> 
-    <foaf:category>Museums</foaf:category>
-    <foaf:country_code>FR</foaf:country_code> 
-    <foaf:zoom_level>15</foaf:zoom_level>   -->
+
     <foaf:name>Ir. Soekarno</foaf:name>
     <foaf:birthName>Kusno Sosrodihardjo</foaf:birthName>  
     <foaf:birthDate> 1901-06-06</foaf:birthDate>
@@ -28,7 +18,6 @@
     <foaf:birthPlace>Jalan Pandean IV, nomer 50, Kelurahan Peneleh, Kecamatan Genteng, Surabaya.</foaf:birthPlace>
     <foaf:latitude>-7.250848838779101</foaf:latitude> 
     <foaf:longitude>112.74065726268972</foaf:longitude> 
-    <!-- <foaf:dms_lat>7°15'03.1"S </foaf:dms_lat> 
-    <foaf:dms_long>	112°44'26.4"E</foaf:dms_long>  -->
+
     </foaf:Maps>
 </rdf:RDF>
