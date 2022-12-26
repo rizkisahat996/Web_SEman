@@ -171,44 +171,44 @@ $sparql_query = 'select ?synopsis ?child1  where{
                     <div class="u-container-layout u-container-layout-2">
                     <?php
 
-$uri_rdf = 'http://localhost/Web_SEman/maps.rdf';
-$data = \EasyRdf\Graph::newAndLoad($uri_rdf);//yg menghubungka ke rdf yg telah dibuat
-$doc = $data->primaryTopic();//dipakai untuk jika ada titlle didbpedia untuk predikat sepertinya
+  $uri_rdf = 'http://localhost/Web_SEman/maps.rdf';
+  $data = \EasyRdf\Graph::newAndLoad($uri_rdf);//yg menghubungka ke rdf yg telah dibuat
+  $doc = $data->primaryTopic();//dipakai untuk jika ada titlle didbpedia untuk predikat sepertinya
 
 
-?>
-<!-- ukuran dari mapsnya ditampilan web -->
-<div id="map" style="width: 700px; height: 300px"></div>
-<script>
-  //lokasi Museum Louvre. longitude dan longitude
-  const map = L.map("map").setView(['<?= $doc->get('foaf:latitude') ?>', '<?= $doc->get('foaf:longitude') ?>'], 15);
-                                                  //panggil longitude                   //panggil longitude
-  const tiles = L.tileLayer(
-    "https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    }
-  ).addTo(map);
+  ?>
+  <!-- ukuran dari mapsnya ditampilan web -->
+  <div id="map" style="width: 700px; height: 300px"></div>
+  <script>
+    //lokasi Museum Louvre. longitude dan longitude
+    const map = L.map("map").setView(['<?= $doc->get('foaf:latitude') ?>', '<?= $doc->get('foaf:longitude') ?>'], 15);
+                                                    //panggil longitude                   //panggil longitude
+    const tiles = L.tileLayer(
+      "https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }
+    ).addTo(map);
 
-  const marker = L.marker(['<?= $doc->get('foaf:latitude') ?>', '<?= $doc->get('foaf:longitude') ?>'])
-    .addTo(map)
-    .bindPopup("<b>Ir. Soekarno</b><br />birthplace")
-    .openPopup();
+    const marker = L.marker(['<?= $doc->get('foaf:latitude') ?>', '<?= $doc->get('foaf:longitude') ?>'])
+      .addTo(map)
+      .bindPopup("<b>lokasi</b><br />kelahiran Ir. Soekarno")
+      .openPopup();
 
-  const popup = L.popup()
-    .setLatLng(['<?= $doc->get('foaf:latitude') ?>', '<?= $doc->get('foaf:longitude') ?>'])
-    .setContent("Ir. Soekarno birthplace")
-    .openOn(map);
-
-  function onMapClick(e) {
-    popup
-      .setLatLng(e.latlng)
-      .setContent(`You clicked the map at ${e.latlng.toString()}`)
+    const popup = L.popup()
+      .setLatLng(['<?= $doc->get('foaf:latitude') ?>', '<?= $doc->get('foaf:longitude') ?>'])
+      .setContent("rumah lokasi kelahiran Ir. Soekarno")
       .openOn(map);
-  }
 
-  map.on("click", onMapClick);
-</script>
+    function onMapClick(e) {
+      popup
+        .setLatLng(e.latlng)
+        .setContent(`You clicked the map at ${e.latlng.toString()}`)
+        .openOn(map);
+    }
+
+    map.on("click", onMapClick);
+  </script>
                     </div>
                   </div>
                 </div>
