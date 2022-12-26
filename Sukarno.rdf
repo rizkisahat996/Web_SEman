@@ -13,24 +13,28 @@
 	xmlns:hiperinflasi="http://example.org/schema/hiperinflasi">
 
 
-	
-		<foaf:PersonalProfileDocument rdf:about="http://localhost/Web_SEman/Sukarno.rdf">
-    	<rdfs:label>Sukarno Bibliography</rdfs:label>
-    	<foaf:maker rdf:resource="http://localhost/Web_SEman/"/>
-    	<foaf:primaryTopic rdf:resource="http://localhost/Web_SEman/"/>
-  		</foaf:PersonalProfileDocument>
+	<foaf:PersonalProfileDocument rdf:about="http://localhost/Web_SEman/Sukarno.rdf">
+	<rdfs:label>Sukarno Bibliography</rdfs:label>
+	<foaf:maker rdf:resource="http://localhost/Web_SEman/"/>
+	<foaf:primaryTopic rdf:resource="http://localhost/Web_SEman/"/>
+	</foaf:PersonalProfileDocument>
 
-<rdf:Description rdf:about="https://dbpedia.org/page/Sukarno">
-	<foaf:name xml:lang="en">Sukarno Hatta</foaf:name>
-	<rdfs:label xml:lang="en">Sukarno</rdfs:label>
-	
-
-</rdf:Description>
+	<rdf:Description rdf:about="https://dbpedia.org/page/Sukarno">
+		<foaf:name xml:lang="en">Sukarno Hatta</foaf:name>
+		<rdfs:label xml:lang="en">Sukarno</rdfs:label>
+	</rdf:Description>
 
 	<foaf:Person rdf:about="http://localhost/arnis/Web_SEman/Sukarno.rdf">
 		<foaf:name xml:lang="en">Sukarno Hatta</foaf:name>
 		<foaf:homepage rdf:resource="https://dbpedia.org/page/Sukarno"/>
 		<rdfs:label xml:lang="en">Sukarno</rdfs:label>
+		<foaf:birthName>Kusno Sosrodihardjo</foaf:birthName>  
+		<foaf:birthDate> 1901-06-06</foaf:birthDate>
+		<foaf:deathDate>1970-06-21</foaf:deathDate>
+		<foaf:birthPlace>Jalan Pandean IV, nomer 50, Kelurahan Peneleh, Kecamatan Genteng, Surabaya.</foaf:birthPlace>
+		<foaf:latitude>-7.250848838779101</foaf:latitude> 
+		<foaf:longitude>112.74065726268972</foaf:longitude> 
+
 		<hiperinflasi:year1957 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">14</hiperinflasi:year1957>
 		<hiperinflasi:year1958 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">18</hiperinflasi:year1958>
 		<hiperinflasi:year1959 rdf:datatype="http://www.w3.org/2001/XMLSchema#Integer">13</hiperinflasi:year1959>

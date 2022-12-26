@@ -78,7 +78,9 @@ $sparql_query = 'select ?synopsis ?child1  where{
     <meta name="generator" content="Nicepage 5.2.0, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
-    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
@@ -169,16 +171,16 @@ $sparql_query = 'select ?synopsis ?child1  where{
                   <p class="u-custom-font u-font-merriweather u-text u-text-default u-text-1"> Sukarno Birthplace</p>
                   <div class="u-container-style u-grey-5 u-group u-group-1">
                     <div class="u-container-layout u-container-layout-2">
-                    <?php
-
+                    
+  <?php
   $uri_rdf = 'http://localhost/Web_SEman/maps.rdf';
   $data = \EasyRdf\Graph::newAndLoad($uri_rdf);//yg menghubungka ke rdf yg telah dibuat
   $doc = $data->primaryTopic();//dipakai untuk jika ada titlle didbpedia untuk predikat sepertinya
-
-
   ?>
+
+
   <!-- ukuran dari mapsnya ditampilan web -->
-  <div id="map" style="width: 700px; height: 300px"></div>
+  <div id="map" style="width: 500px; height: 300px"></div>
   <script>
     //lokasi Museum Louvre. longitude dan longitude
     const map = L.map("map").setView(['<?= $doc->get('foaf:latitude') ?>', '<?= $doc->get('foaf:longitude') ?>'], 15);
@@ -209,6 +211,9 @@ $sparql_query = 'select ?synopsis ?child1  where{
 
     map.on("click", onMapClick);
   </script>
+
+
+
                     </div>
                   </div>
                 </div>
@@ -222,21 +227,41 @@ $sparql_query = 'select ?synopsis ?child1  where{
                   </div> -->
                   <!-- <p class="u-align-left u-text u-text-5">Sample text. Click to select the text box. Click again or double click to start editing the text.</p> -->
                   <p class="u-align-justify u-text u-text-6"> 
-                  <?php 
-                                    foreach($result1 as $row){
-                                  
-                                        echo '</br> - ';
-                                        echo $row -> battles;
-                                        echo '</br> - ' ;
-                                        echo $row -> office;
-                                        echo '</br></br>';
-                                        echo 'Birth date :    ';
-                                        echo $row -> birthDate;
-                                        echo '</br>';
-                                        echo 'Birtrh Place :   ';
-                                        echo $row -> birthPlace;
-                                        }  
-                                 ?>
+                 
+                  <h4 style="color: black">sekilas tentang Ir. Soekarno</h4>
+                    <table class="margina">
+                      <tbody>
+                        <tr>
+                          <th>name</th>
+                          <td><?= $doc->get('foaf:name') ?></td>
+                        </tr>
+                        <tr>
+                          <th>birthName</th>
+                          <td><?= $doc->get('foaf:birthName') ?></td>
+                        </tr>
+                        <tr>
+                          <th>birthDate</th>
+                          <td><?= $doc->get('foaf:birthDate') ?></td>
+                        </tr>
+                        <tr>
+                          <th>deathDate</th>
+                          <td><?= $doc->get('foaf:deathDate') ?></td>
+                        </tr>
+                        <tr>
+                          <th>birthPlace</th>
+                          <td><?= $doc->get('foaf:birthPlace') ?></td>
+                        </tr>
+                        <tr>
+                          <th>latitude</th>
+                          <td><?= $doc->get('foaf:latitude') ?></td>
+                        </tr>
+                        <tr>
+                          <th>longitude </th>
+                          <td><?= $doc->get('foaf:longitude') ?></td>
+                        </tr>
+
+                      </tbody>
+                    </table>
                                  
                   </p>
                   <!-- <p class="u-align-justify u-text u-text-6"> The principal reason we continue to adapt and evolve our business model is to ensure that we are meeting our customers’ expectations. One example of this has been to use modern technology and the introduction of the real time tracking our teams using GPS.&nbsp;</p>
