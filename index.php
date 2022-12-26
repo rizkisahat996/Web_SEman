@@ -93,38 +93,9 @@ $sparql_query = 'select ?synopsis ?child1  where{
     <meta property="og:type" content="website">
   </head>
   <body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-xl-mode" data-lang="en">
-    <!-- <header class="u-clearfix u-header u-header" id="sec-f5af"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <a href="https://nicepage.com" class="u-image u-logo u-image-1">
-          <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
-        </a>
-        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
-              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
-              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</g></svg>
-            </a>
-          </div>
-          <div class="u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About.html" style="padding: 10px 20px;">About</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact.html" style="padding: 10px 20px;">Contact</a>
-</li></ul>
-          </div>
-          <div class="u-nav-container-collapse">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html">About</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html">Contact</a>
-</li></ul>
-              </div>
-            </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-          </div>
-        </nav>
-      </div></header> -->
+
+
+  <!-- About Awal--->
     <section class="u-clearfix u-palette-1-base u-section-1" id="carousel_6dc2">
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
@@ -145,6 +116,7 @@ $sparql_query = 'select ?synopsis ?child1  where{
                   </p>
                 </div>
               </div>
+              <!--Gambar Soekarno-->
               <div class="u-container-style u-layout-cell u-size-25 u-layout-cell-2">
                 <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-top-sm u-valign-top-xs u-container-layout-2">
                   <!-- <img class="u-expanded-width u-image u-image-default u-image-1" src="images/pexels-photo-6995703.jpeg" alt="" data-image-width="1000" data-image-height="1500"> -->
@@ -171,13 +143,13 @@ $sparql_query = 'select ?synopsis ?child1  where{
                   <p class="u-custom-font u-font-merriweather u-text u-text-default u-text-1"> Sukarno Birthplace</p>
                   <div class="u-container-style u-grey-5 u-group u-group-1">
                     <div class="u-container-layout u-container-layout-2">
-                    
+  
+<!-- MAPS ---->
   <?php
   $uri_rdf = 'http://localhost/Web_SEman/maps.rdf';
   $data = \EasyRdf\Graph::newAndLoad($uri_rdf);//yg menghubungka ke rdf yg telah dibuat
   $doc = $data->primaryTopic();//dipakai untuk jika ada titlle didbpedia untuk predikat sepertinya
   ?>
-
 
   <!-- ukuran dari mapsnya ditampilan web -->
   <div id="map" style="width: 500px; height: 300px"></div>
@@ -220,12 +192,8 @@ $sparql_query = 'select ?synopsis ?child1  where{
               </div>
               <div class="u-align-left-sm u-align-left-xs u-container-style u-layout-cell u-size-30 u-layout-cell-2">
                 <div class="u-container-layout u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-3">
-                  <!-- <div class="u-align-center u-container-style u-group u-palette-1-light-1 u-group-2">
-                    <div class="u-container-layout u-valign-top">
-                      <h2 class="u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-default u-text-4">01</h2>
-                    </div>
-                  </div> -->
-                  <!-- <p class="u-align-left u-text u-text-5">Sample text. Click to select the text box. Click again or double click to start editing the text.</p> -->
+        
+                <!--Sekilas Soekarno--->
                   <p class="u-align-justify u-text u-text-6"> 
                  
                   <h4 style="color: black">sekilas tentang Ir. Soekarno</h4>
@@ -264,13 +232,7 @@ $sparql_query = 'select ?synopsis ?child1  where{
                     </table>
                                  
                   </p>
-                  <!-- <p class="u-align-justify u-text u-text-6"> The principal reason we continue to adapt and evolve our business model is to ensure that we are meeting our customers’ expectations. One example of this has been to use modern technology and the introduction of the real time tracking our teams using GPS.&nbsp;</p>
-                  <p class="u-text u-text-7">Sample text. Click to select the text box. Click again or double click to start editing the text.</p> -->
-                  <!-- <div class="u-container-style u-group u-palette-1-light-1 u-group-3">
-                    <div class="u-container-layout u-valign-top">
-                      <h2 class="u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-default u-text-8">02</h2>
-                    </div>
-                  </div> -->
+      
                 </div>
               </div>
             </div>
@@ -287,7 +249,8 @@ $sparql_query = 'select ?synopsis ?child1  where{
               <div class="u-container-style u-layout-cell u-size-60 u-layout-cell-1">
                 <div class="u-container-layout u-valign-top u-container-layout-1">
                   <!-- <img class="u-image u-image-default u-image-1" src="images/pexels-photo-2876090.jpeg" alt="" data-image-width="1083" data-image-height="1500"> -->
-                   <!-- Chart -->
+
+<!------------- Chart ------->
       <div class="choose_section layout_padding">
          <div class="container">
             <!-- <h1 class="u-custom-font u-font-merriweather u-text u-text-1">Hyperinflation During Soekarno's Leadership(1945-1965)</h1> -->
@@ -342,58 +305,9 @@ $sparql_query = 'select ?synopsis ?child1  where{
           </div>
         </div>
       </div>
-    </section>
-    <!-- <section class="u-clearfix u-section-4" id="carousel_690e">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-20 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-size-36 u-size-60-md">
-                <div class="u-layout-col">
-                  <div class="u-size-20">
-                    <div class="u-layout-row">
-                      <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
-                        <div class="u-container-layout u-valign-middle u-container-layout-1">
-                          <h2 class="u-custom-font u-font-merriweather u-text u-text-1">Gallery</h2>
-                          <p class="u-text u-text-default u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-                        </div>
-                      </div>
-                      <div class="u-container-style u-image u-layout-cell u-size-30 u-image-1" data-image-width="1001" data-image-height="1500">
-                        <div class="u-container-layout u-container-layout-2"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="u-size-40">
-                    <div class="u-layout-row">
-                      <div class="u-container-style u-image u-layout-cell u-size-60 u-image-2" data-image-width="562" data-image-height="750">
-                        <div class="u-container-layout u-container-layout-3"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-24 u-size-60-md">
-                <div class="u-layout-col">
-                  <div class="u-container-style u-image u-layout-cell u-size-60 u-image-3" data-image-width="1000" data-image-height="1500">
-                    <div class="u-container-layout u-container-layout-4"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-align-center u-clearfix u-palette-1-base u-section-5" id="carousel_7c12">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-container-style u-expanded-width-xs u-group u-white u-group-1">
-          <div class="u-container-layout u-container-layout-1"><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 409.294 409.294" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5c4d"></use></svg><svg class="u-svg-content" viewBox="0 0 409.294 409.294" id="svg-5c4d"><path d="m233.882 29.235v175.412h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412z"></path><path d="m0 204.647h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412h-175.412z"></path></svg></span>
-            <h4 class="u-custom-font u-font-merriweather u-text u-text-1">We’ve seen a lot of efficiency in our workflow processes the way subs work and the way designers work with templates.</h4><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 409.294 409.294" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0171"></use></svg><svg class="u-svg-content" viewBox="0 0 409.294 409.294" id="svg-0171"><path d="m233.882 29.235v175.412h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412z"></path><path d="m0 204.647h116.941c0 64.48-52.461 116.941-116.941 116.941v58.471c96.728 0 175.412-78.684 175.412-175.412v-175.412h-175.412z"></path></svg></span>
-          </div>
-        </div>
-        <h5 class="u-text u-text-2">- James Hawkes, General Manager Operations  -</h5>
-      </div>
-    </section> -->
+</section>
+  
+<!---- Teams Siuuu---->
     <section class="u-align-center u-clearfix u-section-6" id="carousel_2f92">
       <div class="u-clearfix u-sheet u-sheet-1">
         <h1 class="u-custom-font u-font-merriweather u-text u-text-1">Our Teams</h1>
