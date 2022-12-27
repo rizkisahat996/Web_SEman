@@ -7,8 +7,6 @@ require_once __DIR__."/html_tag_helpers.php";
     \EasyRdf\RdfNamespace::set('foaf', 'http://xmlns.com/foaf/0.1/');
     \EasyRdf\RdfNamespace::set('dbp', 'http://dbpedia.org/property/');
     \EasyRdf\RdfNamespace::set('dbo', 'http://dbpedia.org/ontology/');
-    \EasyRdf\RdfNamespace::set('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#');
-    \EasyRdf\RdfNamespace::set('rdfs', 'http://www.w3.org/2000/01/rdf-schema#');
     \EasyRdf\RdfNamespace::set('hiperinflasi', 'http://example.org/schema/hiperinflasi');
     \EasyRdf\RdfNamespace::set('prov', 'http://www.w3.org/ns/prov#');
     \EasyRdf\RdfNamespace::set('gold', 'http://purl.org/linguistics/gold/');
