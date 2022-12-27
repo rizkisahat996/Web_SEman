@@ -152,7 +152,7 @@ $sparql_query = 'select ?synopsis ?child1  where{
   ?>
 
   <!-- ukuran dari mapsnya ditampilan web -->
-  <div id="map" style="width: 500px; height: 300px"></div>
+  <div id="map" style="width: 400px; height: 500px"></div>
   <script>
     //lokasi Museum Louvre. longitude dan longitude
     const map = L.map("map").setView(['<?= $doc->get('foaf:latitude') ?>', '<?= $doc->get('foaf:longitude') ?>'], 15);
